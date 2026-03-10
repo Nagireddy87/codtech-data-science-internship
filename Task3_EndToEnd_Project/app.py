@@ -2,10 +2,8 @@ from flask import Flask, request, jsonify
 import pickle
 import numpy as np
 
-# Initialize Flask
 app = Flask(__name__)
 
-# Load trained model
 model = pickle.load(open("model.pkl", "rb"))
 
 @app.route("/")
